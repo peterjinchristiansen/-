@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Roboto+Condensed&display=swap');
+
+.navbar {
+    background: radial-gradient(circle, var(--powder) 0%, var(--honeydew) 100%);
+    display: flex;
+}
+
+.logo {
+    font-family: 'Ceviche One', cursive;
+    font-size: 2.5rem;
+    color: black;
+    margin: 10px;
+}
+
+.navLinks {
+    margin-inline-start: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+.navLink {
+    padding: 5px;
+    font-size: 1.1rem;
+    color: var(--imperial);
+}
+
+.navLink:hover {
+    color: var(--prussian);
+}
+
+.hero {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.colors {
+    width: calc(100vw / 5)
+}
