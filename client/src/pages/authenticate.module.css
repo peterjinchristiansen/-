@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    margin: 5vh
+}
+
+.formItem {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.form {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.input {
+    width: 60%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.loginButton, .registerButton {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: var(--honeydew);
+    cursor: pointer;
+}
+
+.registerButton:hover, .loginButton {
+    background-color: var(--prussian);
+}
+
+.loginButton:hover, .registerButton  {
+    background-color: var(--imperial);
+}

@@ -1,0 +1,30 @@
+
+.container {
+    margin: 5vw;
+    padding: 3vw;
+    border-radius: 8px;
+    background-color: var(--powder);
+    display: flex;
+}
+
+.image {
+    margin: auto 1vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+.info {
+    margin: 2vw;
+}
+
+.button {
+    background-color: var(--imperial);
+    margin: auto;
+    padding: 2vw;
+    border-radius: 3vw;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--celadon);
+}

@@ -6,7 +6,15 @@ import colors from '../data/colors'
 const Home = () => {
 
 const getLink = ({ id, path, name }) => {
-    return <Link key={id} to={path} className={style.navLink}>{name}</Link>
+    return(
+        <Link
+            key={id}
+            to={{ pathname: path, state: { variation: name } }}
+            className={style.navLink}
+        >
+            {name}
+        </Link>
+    )
 }
 
 const getColor = ({ id, code, name }) => {
@@ -15,7 +23,7 @@ const getColor = ({ id, code, name }) => {
     return(
         <div className='header'>
             <div className={style.navbar}>
-                <Link to='/' className={style.logo}>StudyGroups</Link>
+                <Link to='/' className={style.logo}><div>StudyGroups</div></Link>
                 <div className={style.navLinks}>
                     {navigation.map(item => getLink(item))}
                 </div>
