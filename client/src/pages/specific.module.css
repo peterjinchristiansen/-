@@ -1,0 +1,13 @@
+.hero {
+    background-color: var(--imperial);
+    width: 100%;
+    display: flex;
+}
+
+.profilePicture {
+    width: 40vw;
+}
+
+.info {
+    margin: auto;
+}

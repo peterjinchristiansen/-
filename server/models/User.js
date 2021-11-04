@@ -21,6 +21,11 @@ const userSchema = mongoose.Schema({
         unique: true,
         match: [/.+@.+\..+/, 'Must use a valid email address']
     },
+    profilePicture: {
+        type: String,
+        required: true,
+        default: 'https://hips.hearstapps.com/countryliving.cdnds.net/17/47/2048x1365/gallery-1511194376-cavachon-puppy-christmas.jpg?resize=640:*'
+    },
     password: {
         type: String,
         required: true

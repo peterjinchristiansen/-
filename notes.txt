@@ -1,1 +1,77 @@
-Got the register function completed
+(User / Group / School) ordering
+
+MINI PROPS
+    key: (userId / groupId / schoolId)
+    data: {
+        image (profilePicture / groupPicture / schoolPicture)
+        text1 (fullName / groupName / schoolName)
+        text2 (aka [username] / subtitle / Located in [state])
+        text3 (Goes to [school] / At [school] / [groupCount] groups)
+        text4 ([friendCount] friends / [userCount] people have joined / [userCount] people)
+    }
+    status: (true if associated with you, otherwise false)
+    variation: ('Self' if it's you specifically, 'User' / 'Group' / 'School')
+
+MEGA PROPS
+    key: (userId / groupId / schoolId)
+    data: {
+        image (profilePicture / groupPicture / schoolPicture)
+        text1 (fullName / groupName / schoolName)
+        text2 (aka [username] / subtitle / Located in [state])
+        text3 (Goes to [school] / At [school] / [groupCount] groups)
+        text4 ([friendCount] friends / [userCount] people have joined / [userCount] people)
+    }
+    status: (true if associated with you, otherwise false)
+    variation: ('Self' if it's you specifically, 'User' / 'Group' / 'School')
+    relatedModelOne: (all associated => School / School / Groups)
+    relatedModelTwo: (all associated => Groups / Users / Users)
+}
+
+
+
+FUNCTIONS TO GET DATA
+    MINIS {
+        Variation: User / Group / School {
+            QUERY_USER / QUERY_GROUP / QUERY_SCHOOL {
+                userId / groupId / schoolId
+                profilePicture / groupPicture / schoolPicture
+                fullName / groupName / schoolName
+                username / subtitle / location
+                school / school / groupCount
+                friendCount / userCount / userCount
+            }
+            checkYourAssociations
+        }
+    }
+
+
+    MEGAS {
+        Variation: (Self / User) / Group / School {
+            QUERY_ONE_USER / QUERY_ONE_GROUP / QUERY_ONE_SCHOOL {
+                userId / groupId / schoolId
+                profilePicture / groupPicture / schoolPicture
+                fullName / groupName / schoolName
+                username / subtitle / location
+                school / school / groupCount
+                friendCount / userCount / userCount
+
+                school / school / groups {
+                    schoolId / schoolId / groupId
+                    schoolPicture / schoolPicture / groupPicture
+                    schoolName / schoolName / groupName
+                    location / location / subtitle
+                    groupCount / groupCount / school
+                    userCount / userCount / userCount
+                }
+                groups / users / users {
+                    groupId / userId / userId
+                    groupPicture / profilePicture / profilePicture
+                    groupName / fullName / fullName
+                    subtitle / username / username
+                    school / school / school
+                    userCount / friendCount / friendCount
+                }
+            }
+            checkYourAssociations
+        }
+    }

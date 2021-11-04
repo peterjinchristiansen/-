@@ -1,5 +1,7 @@
 
 import Mini from '../components/elements/Mini'
+import { GET_ALL_GROUPS, GET_ALL_SCHOOLS, GET_ALL_USERS } from '../utils/Queries'
+import { useQuery } from '@apollo/client'
 
 const Search = () => {
     const example = [
