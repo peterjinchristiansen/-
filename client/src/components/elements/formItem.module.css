@@ -1,0 +1,18 @@
+.formItem {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.form {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.input {
+    width: 60%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}

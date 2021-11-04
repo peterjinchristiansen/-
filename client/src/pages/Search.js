@@ -1,3 +1,4 @@
+
 import Mini from '../components/elements/Mini'
 
 const Search = () => {
